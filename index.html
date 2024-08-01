@@ -5,15 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallary</title>
 </head>
+<style>
+    body{
+        background-color: rgb(205, 241, 208);
+    }
+    .images{
+        width: 450px;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        margin: 20px auto;
+        border-radius: 10px;
+    }
+    .btn-container{
+        position: relative;
+        width: fit-content;
+        display: block;
+        margin: 10px auto;
+    }
+    .btn{
+        margin: 0 10px;
+        height: 50px;
+        cursor: pointer;
+        background-color:white;
+        border-radius: 50px;
+    }
+    .btn-left{
+        position: absolute;
+        top:100px;
+        left: -30px;
+    }
+    .btn-right{
+        position: absolute;
+        top:100px;
+        right: -30px;
+    }
+    .text{
+        margin: 60px 150px;
+    }
+    .text:hover{
+        color: green;
+        cursor: pointer;
+    }
+</style>
+</head>
 <body>
     <div class="btn-container">
 
-        <img src="/images/img1.jfif" class="diamond-img" id="img"/>
+        <img src="/images/img1.jfif" class="images" id="img"/>
 
-        <img src="/images/next.png" class="btn-left" onclick="prev()">
+        <img src="/images/previous.png" class="btn btn-left" onclick="prev()">
         
-        <img src="/images/previous.png"  class=" btn-right" onclick="next()">
-            
+        <img src="/images/next.png"  class="btn btn-right" onclick="next()">
+
+        <h3 class="text">Images Gallary</h3>    
     </div>
 </body>
 </html>
